@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Crucial for games: stops text highlighting when tapping furiously */
+    user-select: none; 
+    -webkit-user-select: none;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Stops swipe-to-refresh or scrolling */
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Constrains the game to mobile proportions on desktop */
+    height: 100%;
+    max-height: 850px;
+    background-color: #222;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00ff41; /* Classic retro green */
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    color: #00ff41;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.overlay p {
+    margin-bottom: 40px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+#start-btn {
+    padding: 15px 50px;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: #00ff41;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #009927;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#start-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #009927;
+}
+
+.hidden {
+    display: none !important;
+}
