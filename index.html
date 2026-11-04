@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Prevents double-tap zooming and scrolling on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cellflow Cricket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Live Score Layer -->
+        <div id="ui-layer">
+            <div class="stats">
+                <span id="score-display">Score: 0</span>
+                <span id="high-score-display">Best: 0</span>
+            </div>
+        </div>
+        
+        <!-- The Game World -->
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Start/Game Over Screen -->
+        <div id="start-screen" class="overlay">
+            <h1>CRICKET</h1>
+            <p>Tap to Hit • Swipe to Cut/Pull</p>
+            <button id="start-btn">PLAY</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
